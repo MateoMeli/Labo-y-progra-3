@@ -5,5 +5,10 @@
 		if($i % 2){
 
 			$contadorImpares ++;
+			$array[$contadorImpares] = $i;
 		}
 	}
+	foreach($array as $valor){
+		echo "<br/>", $valor;
+	}
+?>

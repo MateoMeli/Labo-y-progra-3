@@ -13,6 +13,27 @@
             padding: 3px;
             text-align: center;
         }
+
+        tbody>tr:nth-child(2){
+          background-color: chartreuse;
+        }
+
+        col:nth-child(2){
+          background-color: darkblue;
+        }
+
+        .orange{
+          color: darkorange;
+        }
+
+        .mayuscula{
+          text-transform: uppercase;
+          color: purple;
+        }
+
+        p:nth-child(even) {
+          background-color: red;
+        }
     </style>
   </head>
   <body>
@@ -47,6 +68,15 @@
     </dl>
 
     <table>
+      <colgroup>
+        <col> 
+        <col>
+        <col>
+        <col>
+        <col>
+
+      </colgroup>
+
       <caption>
         Asignaturas
       </caption>
@@ -94,5 +124,14 @@
           </tr>
       </tfoot>
     </table>
+
+    <div  class="orange">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam asperiores animi voluptates delectus cupiditate, unde similique, tempore expedita impedit <span class="mayuscula"> rerum placeat est hic in vero! Natus </span> aspernatur fugiat nam minima!</p>
+    <p>Sunt veniam corrupti tenetur, dolor, qui, esse repellat impedit beatae porro distinctio eligendi? Maxime ipsam dicta minus consequatur libero, cum esse molestiae autem tenetur incidunt sapiente fugiat eos explicabo dolorem.</p>
+    </div>
+    <div>
+    <p>Et molestias veniam tempore eveniet <span>dignissimos</span> ipsa est a, omnis neque impedit delectus deserunt hic numquam cum? Voluptatibus quas iusto aliquam ad voluptas obcaecati sed mollitia repellat, iste repellendus nulla!</p>
+    <p>Et molestias veniam tempore eveniet <span>dignissimos</span> ipsa est a, omnis neque impedit delectus deserunt hic numquam cum? Voluptatibus quas iusto aliquam ad voluptas obcaecati sed mollitia repellat, iste repellendus nulla!</p>
+    </div>
   </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-	$num = 60;
+	$num = 32;
 	if($num > 60 || $num < 20){
 		echo "El numero esta fuera del rango";
 	}else{
