@@ -1,0 +1,21 @@
+h1{
+    /*color: blue;*/
+    font-size: 50px;
+}
+
+.azul{
+    color: blue;
+}
+
+#miparrafo{
+    color: red;
+}
+
+#h1naranja{
+    color: orange;
+}
+
+a[href *= "google"]{
+    text-decoration: none;
+    color: red;
+}
