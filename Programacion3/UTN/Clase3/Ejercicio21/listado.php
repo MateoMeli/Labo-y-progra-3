@@ -1,7 +1,7 @@
 <?php
     include "usuario.php";
 
-    if(!(isset($_GET["lista"]))){
+    if(isset($_GET["lista"])){
         $lista = $_GET["lista"];
         switch($lista){
             case "usuario":

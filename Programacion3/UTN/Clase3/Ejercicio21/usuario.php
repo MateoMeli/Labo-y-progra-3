@@ -11,9 +11,9 @@
             $this->_clave = $clave;
         }
         
-        public function GuardarEnCsv(){
-            $archivo = fopen("usuarios.csv", "a");
-            if(fwrite($archivo, $this->UsuarioACsv() . "\n") != false){
+        public static function GuardarEnCsv(Usuario $u){
+            $archivo = fopen("Listado.csv", "a+");
+            if(fwrite($archivo, $u->UsuarioACsv() . "\n") != false){
                 fclose($archivo);
                 return true;
             }else{
@@ -24,13 +24,24 @@
 
         public static function LeerDeCsv($archivo){
             $arrayUsuarios = array();
-            while(feof($archivo)){
-
+            $archivo = fopen($archivo, "r");
+            while(!feof($archivo)){
+                $renglon = fgetcsv($archivo,1000 ,',');
+                var_dump($renglon);
+                $usuario = new Usuario($renglon[0], $renglon[1], $renglon[2]);
+                array_push($arrayUsuarios, $usuario);
             }
+            fclose($archivo);
+            return $arrayUsuarios;
         }
 
         public static function ImprimirArray($array){
-            
+            $retorno = "<ul>";
+            foreach($array as $key => $value){
+                $retorno .= "<li>Nombre: " . $value->_nombre . " Clave: " . $value->_clave . " Mail: " . $value->_mail . "<li>";
+            }
+            $retorno .= "<ul>";
+            return $retorno;  
         }
 
         private function UsuarioACsv() : string{
