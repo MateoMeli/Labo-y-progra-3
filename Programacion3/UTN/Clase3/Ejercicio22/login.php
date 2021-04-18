@@ -5,12 +5,8 @@
     $clave = $_POST["clave"];
 
     if(isset($mail) && isset($clave)){
-        if(Usuario::Validar($mail, $clave)){
-            echo ("Verficado<br>");
-        }else{
-            echo("");
-        }
+        echo Usuario::Validar($mail, $clave);
     }else{
-        echo("Error en los datos ingresados<br>");
+        echo("Variables sin settear<br>");
     }
 ?>
