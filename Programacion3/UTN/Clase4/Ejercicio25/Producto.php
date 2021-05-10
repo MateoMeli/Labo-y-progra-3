@@ -9,9 +9,33 @@ class Producto{
     public $_stock;
     public $_precio;
 
+    public function getNombre(){
+        return $this->_nombre;
+    }
+
+    public function getTipo(){
+        return $this->_tipo;
+    }
+
+    public function getPrecio(){
+        return $this->_precio;
+    }
+
+    public function setStock($value){
+        $this->_stock = $value;
+    }
+
+    public function getStock(){
+        return $this->_stock;
+    }
+
+    public function getCodigoDeBarras(){
+        return $this->_codigoDeBarras;
+    }
+
     public function __construct($codigoDeBarras, $nombre, $tipo, $stock, $precio)
     {
-        $this->_id = rand(1, 10000);
+        $this->_id = rand(1, 100000);
         $this->_codigoDeBarras = $codigoDeBarras;
         $this->_nombre = $nombre;
         $this->_tipo = $tipo;
@@ -43,7 +67,6 @@ class Producto{
         return $array;
     }
 
-    
 }
 
 ?>
